@@ -1,4 +1,5 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Box, Container, Paper, Typography } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import * as alleyApi from "../../utilities/alleys-api";
@@ -15,8 +16,14 @@ export default function FindAnAlleyPage() {
   }, []);
 
   const columns = [
-    // { field: "id", headerName: "ID", width: 90 },
-    { field: "name", headerName: "Name", width: 350 },
+    {
+      field: "name",
+      headerName: "Name",
+      width: 350,
+      renderCell: (params) => (
+        <Link to={`/alleys/${params.row._id}`}>{params.value}</Link>
+      ),
+    },
     { field: "city", headerName: "City", width: 200 },
     { field: "state", headerName: "State", width: 110 },
     { field: "laneType", headerName: "Lane Type", width: 160 },
