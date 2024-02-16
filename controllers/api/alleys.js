@@ -3,6 +3,7 @@ const Alley = require("../../models/alley");
 module.exports = {
   index,
   create,
+  alleyDetail,
 };
 
 async function index(req, res) {
@@ -22,5 +23,13 @@ async function create(req, res) {
   } catch (error) {
     console.log(error);
     res.status(400).json(error);
+  }
+}
+
+async function alleyDetail(req, res) {
+  try {
+  } catch (err) {
+    console.log(err);
+    res.status(400).json(err);
   }
 }
