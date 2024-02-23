@@ -10,6 +10,7 @@ import TournamentsPage from "../TournamentsPage/TournamentsPage";
 import CreateTournamentPage from "../CreateTournamentPage/CreateTournamentPage";
 import ProfilePage from "../ProfilePage/ProfilePage";
 import FindAnAlleyPage from "../FindAnAlleyPage/FindAnAlleyPage";
+import AlleyProfilePage from "../AlleyProfilePage/AlleyProfilePage";
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -52,6 +53,7 @@ function App() {
         <Route path="/tournaments" element={<TournamentsPage />} />
         <Route path="/tournaments/create" element={<CreateTournamentPage />} />
         <Route path="/alleys" element={<FindAnAlleyPage />} />
+        <Route path="/alleys/:alleyId" element={<AlleyProfilePage />} />
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/profile" element={<ProfilePage user={user} />} />
       </Routes>

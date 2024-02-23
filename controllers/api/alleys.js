@@ -28,6 +28,8 @@ async function create(req, res) {
 
 async function alleyDetail(req, res) {
   try {
+    const alley = await Alley.findById(req.params.id);
+    res.status(200).json(alley);
   } catch (err) {
     console.log(err);
     res.status(400).json(err);
