@@ -29,6 +29,23 @@ const alleySchema = new Schema({
   numberOfLanes: {
     type: Number,
   },
+  imgUrl: {
+    type: String,
+    default:
+      "https://icons.veryicon.com/png/o/miscellaneous/travel-flat-colorful-icon/placeholder-9.png",
+  },
+  smokingAllowed: {
+    type: Boolean,
+  },
+  hasRestaurant: {
+    type: Boolean,
+  },
+  hasBar: {
+    type: Boolean,
+  },
+  beerAndWineOnly: {
+    type: Boolean,
+  },
 });
 
 module.exports = mongoose.model("Alley", alleySchema);

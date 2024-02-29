@@ -33,9 +33,13 @@ export default function AlleyProfilePage() {
               flexDirection: "row",
               alignContent: "space-between",
               justifyContent: "space-evenly",
+              width: 100,
+              height: 100,
+              p: 5,
+              pl: 10,
             }}
           >
-            <h5>Display Image</h5>
+            <img src={alley.imgUrl} alt={`${alley.name} Alley Photo`} />
             <Box>
               <Typography variant="h5">Address</Typography>
               <p>
